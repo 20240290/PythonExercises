@@ -1,7 +1,9 @@
 # Joseph Patambag
 # August 13, 2024
 
-# 6-1. Person: Use a dictionary to store information about a person you know. Store their first name, last name, age, and the city in which they live. You should have keys such as first_name, last_name, age, and city. Print each piece of information stored in your dictionary.
+# 6-1. Person: Use a dictionary to store information about a person you know. Store their first name, last name, age, 
+# and the city in which they live. You should have keys such as first_name, last_name, age, and city. 
+# Print each piece of information stored in your dictionary.
 
 # Person dictionary variable
 person = {
@@ -15,7 +17,9 @@ for key,val in person.items():
     print(f"{key} = {val.title()}")
 print("\n")
 
-# 6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers. Think of five names, and use them as keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
+# 6-2. Favorite Numbers: Use a dictionary to store people’s favorite numbers. Think of five names, and use them as
+# keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. 
+# Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
 
 #favorite numbers dictionary variable
 favorite_numbers = {
@@ -36,9 +40,13 @@ for name, num in favorite_numbers.items():
     print(f"{ name.title() } favorite number is: { num }")
 print("\n")
 
-# 6-3. Glossary: A Python dictionary can be used to model an actual dictionary. However, to avoid confusion, let’s call it a glossary.
-# Think of five programming words you’ve learned about in the previous chapters. Use these words as the keys in your glossary, and store their meanings as values.
-# Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and then its meaning, or print the word on one line and then print its meaning indented on a second line. Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
+# 6-3. Glossary: A Python dictionary can be used to model an actual dictionary. 
+# However, to avoid confusion, let’s call it a glossary.
+# Think of five programming words you’ve learned about in the previous chapters. 
+# Use these words as the keys in your glossary, and store their meanings as values.
+# Print each word and its meaning as neatly formatted output. You might print the word followed by a colon and 
+# then its meaning, or print the word on one line and then print its meaning indented on a second line. 
+# Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
 
 #glossary dictionary variable
 glossary = {
@@ -107,7 +115,18 @@ favorite_languages = {
                     'peter':'swift'
                     }
 
-students = ['']
+#students who will take the poll
+students = ["joseph","grayson","lael","bob"]
+
+#Iterate each student to check who should the take the poll
+for student in students:
+    msg  = ""
+    if student in favorite_languages:
+        msg = f"Thank you {student.title()} for participating in the poll!"
+    else:
+        msg = f"Hi {student.title()}!, I would like to invite you to take the favorite language poll!"    
+    print(msg)
+print("\n")
 
 # 6-7. People: Start with the program you wrote for Exercise 6-1 (page 98). Make two new dictionaries representing different people, and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, print everything you know about each person.
 
