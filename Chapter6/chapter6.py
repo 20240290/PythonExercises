@@ -5,7 +5,7 @@
 # and the city in which they live. You should have keys such as first_name, last_name, age, and city. 
 # Print each piece of information stored in your dictionary.
 
-# Person dictionary variable
+# Person dictionary variable declaration
 person = {
             'first_name':'John', 
             'last_name': 'Wick',
@@ -21,7 +21,7 @@ print("\n")
 # keys in your dictionary. Think of a favorite number for each person, and store each as a value in your dictionary. 
 # Print each person’s name and their favorite number. For even more fun, poll a few friends and get some actual data for your program.
 
-#favorite numbers dictionary variable
+#favorite numbers dictionary variable declaration
 favorite_numbers = {
                     'paul':5,
                     'amores':10,
@@ -48,7 +48,7 @@ print("\n")
 # then its meaning, or print the word on one line and then print its meaning indented on a second line. 
 # Use the newline character (\n) to insert a blank line between each word-meaning pair in your output.
 
-#glossary dictionary variable
+#glossary dictionary variable declaration
 glossary = {
             'print':'The print() function prints the specified message to the screen, or other standard output device', 
             'len':'Return the length (the number of items) of an object. The argument may be a sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set).', 
@@ -78,7 +78,7 @@ print("\n")
 # Use a loop to print the name of each river included in the dictionary.
 # Use a loop to print the name of each country included in the dictionary.
 
-#rivers dictionary variable
+#rivers dictionary variable declaration
 rivers = {
     'niagara':'canada',
     'amazon':'south america',
@@ -106,7 +106,7 @@ print("\n")
 # Make a list of people who should take the favorite languages poll. Include some names that are already in the dictionary and some that are not.
 # Loop through the list of people who should take the poll. If they have already taken the poll, print a message thanking them for responding. If they have not yet taken the poll, print a message inviting them to take the poll.
 
-#favorite languages variable
+#favorite languages variable declaration
 favorite_languages = {
                     'paul':'ruby',
                     'amores':'javascript',
@@ -130,7 +130,39 @@ print("\n")
 
 # 6-7. People: Start with the program you wrote for Exercise 6-1 (page 98). Make two new dictionaries representing different people, and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, print everything you know about each person.
 
+#student 1 variable declaration
+student_1 = {
+            'first_name':'John', 
+            'last_name': 'Wick',
+            'age': '54', 
+            'city': 'Brooklyn'
+            }
+#student 2 variable declaration
+student_2 = {
+            'first_name':'Sponge', 
+            'last_name': 'Bob',
+            'age': '30', 
+            'city': 'California'
+            }
+#student 3 variable declaration
+student_3 = {
+            'first_name':'Patrick', 
+            'last_name': 'Star',
+            'age': '54', 
+            'city': 'Chicago'
+            }
+
+#people variable list declaration
+people = [student_1, student_2, student_3]
+
+#Iterate each list of people to display their information
+for person in people:
+    print(f"Hi! I'm {person.get("first_name")} {person.get("last_name")}. Age {person.get("age")} and live in the city of {person.get("city")}")    
+
 # 6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as you do, print everything you know about each pet.
+
+
+
 
 # 6-9. Favorite Places: Make a dictionary called favorite_places. Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. Loop through the dictionary, and print each person’s name and their favorite places.
 
