@@ -130,44 +130,137 @@ print("\n")
 
 # 6-7. People: Start with the program you wrote for Exercise 6-1 (page 98). Make two new dictionaries representing different people, and store all three dictionaries in a list called people. Loop through your list of people. As you loop through the list, print everything you know about each person.
 
-#student 1 variable declaration
-student_1 = {
+#people variable list declaration
+people = [{
             'first_name':'John', 
             'last_name': 'Wick',
             'age': '54', 
             'city': 'Brooklyn'
-            }
-#student 2 variable declaration
-student_2 = {
+            }, {
             'first_name':'Sponge', 
             'last_name': 'Bob',
             'age': '30', 
             'city': 'California'
-            }
-#student 3 variable declaration
-student_3 = {
+            }, {
             'first_name':'Patrick', 
             'last_name': 'Star',
             'age': '54', 
             'city': 'Chicago'
-            }
-
-#people variable list declaration
-people = [student_1, student_2, student_3]
+            }]
 
 #Iterate each list of people to display their information
 for person in people:
-    print(f"Hi! I'm {person.get("first_name")} {person.get("last_name")}. Age {person.get("age")} and live in the city of {person.get("city")}")    
-
+    print(f"Hi! I'm {person.get('first_name')} {person.get('last_name')}. Age {person.get('age')} and live in the city of {person.get('city')}.")    
+print("\n")
 # 6-8. Pets: Make several dictionaries, where each dictionary represents a different pet. In each dictionary, include the kind of animal and the owner’s name. Store these dictionaries in a list called pets. Next, loop through your list and as you do, print everything you know about each pet.
 
+#pets variable list declaration
+pets = [{
+        'pet':'dog',
+        'owner':'paul'
+        }, {
+        'pet':'cat',
+        'owner':'anna'
+        }, {
+        'pet':'lion',
+        'owner':'joe'
+        }, {
+        'pet':'tiger',
+        'owner':'seth'
+        }, {
+        'pet':'dragon',
+        'owner':'danny'
+        }]
 
-
+#Iterate each list of pets to display the pet name and owner
+for pet in pets:
+    print(f"Name of pet: { pet.get('pet').title() }\nOwner: { pet.get('owner').title() }")
+print("\n")
 
 # 6-9. Favorite Places: Make a dictionary called favorite_places. Think of three names to use as keys in the dictionary, and store one to three favorite places for each person. To make this exercise a bit more interesting, ask some friends to name a few of their favorite places. Loop through the dictionary, and print each person’s name and their favorite places.
 
+favorite_places = {
+                    'bob': ['grand canyon','niagara falls','banff'],
+                    'paul': ['paris','hollywood','grand palace'],
+                    'wayne': ['mount fuji','burj khalifa','statue of liberty'],
+                  }
+#Iterate each list of favorite_places to display the name of the place for each person
+for person, places in favorite_places.items():
+    #Iterate each list of places to display
+    place_names = ""
+    for place in places:
+        place_names +=  f"{place.title()}, "
+    print(f"{person.title()}'s favorite places are: { place_names}")    
+print("\n")
 # 6-10. Favorite Numbers: Modify your program from Exercise 6-2 (page 98) so each person can have more than one favorite number. Then print each person’s name along with their favorite numbers.
+
+#favorite numbers dictionary variable declaration
+favorite_numbers = {
+                    'paul':[5, 10, 15],
+                    'amores':[10, 20, 30],
+                    'ryan':[3,6,9],
+                    'joe': [20, 25, 40],
+                    'peter': [15, 20, 25]
+                    }
+#Iterate each list of favorite_numbers to display the numbers for each person
+for name, numbers in favorite_numbers.items():
+    #Iterate each list of numbers
+    favorites = ""
+    for num in numbers:
+        favorites +=  f"{num}, "
+    print(f"{name.title()}'s favorite numbers are: { favorites }")    
+print("\n")
 
 # 6-11. Cities: Make a dictionary called cities. Use the names of three cities as keys in your dictionary. Create a dictionary of information about each city and include the country that the city is in, its approximate population, and one fact about that city. The keys for each city’s dictionary should be something like country, population, and fact. Print the name of each city and all of the information you have stored about it.
 
+#cities dictionary variable declaration
+cities = {
+            'cebu': {
+                'country':'philippines',
+                'population': 114_163_719,
+                'fact':'is an archipelagic country in Southeast Asia. In the western Pacific Ocean, it consists of 7,641 islands, with a total area of 300,000 square kilometers',
+            },
+            'singapore': {
+                'country':'singapore',
+                'population':5_917_600,
+                'fact':'is an island country and city-state in maritime Southeast Asia.'
+            },
+            'boston': {
+                'country':'united states',
+                'population':654_776,
+                'fact':'is the capital and most populous city in the Commonwealth of Massachusetts in the United States.'
+            },
+            'quebec': {
+                'country':'canada',
+                'population':9_030_684,
+                'fact':'is one of the thirteen provinces and territories of Canada. It is the largest province by area and the second-largest by population.'
+            }
+         }
+
+#Iterate to get the name of each city and all of the information that have stored about it.
+for city , details in cities.items():
+    print(f"City: {city.title()}\n\tCountry: {details.get('country').title()} \n\tPopulation:{details.get('population')} \n\tFact:{details.get('fact').title()}")
+
+
 # 6-12. Extensions: We’re now working with examples that are complex enough that they can be extended in any number of ways. Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.
+
+#append people dictionary declaration with additional key
+people.append({
+                'first_name':'Steve', 
+                'last_name': 'Rogers',
+                'age': '41', 
+                'city': 'Brooklyn',
+                'occupation': ['Manager', 'Cleaner', 'Plumber']
+                })
+#Iterate each list of people to display their information
+for person in people:
+    msg = ""
+    if person.get('occupation'):
+        job = ""
+        for work in person.get('occupation'):
+            job += f"{work},"
+        msg = f"Hi! I'm {person.get('first_name')} {person.get('last_name')}. Age {person.get('age')} and live in the city of {person.get('city')}. I work with different jobs as a {job}"
+    else:
+        msg = f"Hi! I'm {person.get('first_name')} {person.get('last_name')}. Age {person.get('age')} and live in the city of {person.get('city')}."
+    print(msg)           
+print("\n")
