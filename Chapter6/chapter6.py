@@ -70,7 +70,7 @@ glossary["constants"] = "A constant is a variable whose value stays the same thr
 
 #iterate each item in the glossary dictionary to show the definition of the word
 for word, meaning in glossary.items():
-    print(f"{word}: {meaning}")
+    print(f"{word.title()}: {meaning}")
 print("\n")
 # 6-5. Rivers: Make a dictionary containing three major rivers and the country each river runs through. 
 # One key-value pair might be 'nile': 'egypt'.
@@ -240,7 +240,7 @@ cities = {
 #Iterate to get the name of each city and all of the information that have stored about it.
 for city , details in cities.items():
     print(f"City: {city.title()}\n\tCountry: {details.get('country').title()} \n\tPopulation:{details.get('population')} \n\tFact:{details.get('fact').title()}")
-
+print("\n")
 
 # 6-12. Extensions: We’re now working with examples that are complex enough that they can be extended in any number of ways. Use one of the example programs from this chapter, and extend it by adding new keys and values, changing the context of the program, or improving the formatting of the output.
 
