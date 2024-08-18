@@ -14,7 +14,7 @@
 prompt = "Choose the following option to run the program: \n\n"
 prompt += "1.Use a conditional test in the while statement to stop the loop. \n"
 prompt += "2.Use an active variable to control how long the loop runs. \n"
-prompt += "3.Use a break statement to exit the loop when the user enters a 'quit' value.\n" 
+prompt += "3.Use a break statement to exit the loop when the user enters a 'quit' value.\n\n" 
 prompt += "Type 'end' to terminate program.\n\n"
 option = input(prompt)
 
@@ -31,29 +31,32 @@ while True:
                     if age != 'quit':
                         try:
                             if int(age) <= 3:
-                                msg = "Your ticket is free."
+                                msg = "Your ticket is free.\n"
                             elif int(age) > 3 and int(age) <= 12:
-                                msg = "Your ticket cost $10"
+                                msg = "Your ticket cost $10.\n"
                             else:
-                                msg = "$15"
+                                msg = "Your ticket cost $15.\n"
                         except ValueError:
-                            msg = "Invalid age. Please try again!"
+                            msg = "Invalid age. Please try again!\n"
                     else:
-                        msg = "End of option 1!"
-                        option = input(prompt)                 
+                        msg = "End of option 1!\n"
+                        option = input(prompt)    
+                    #display result                 
                     print(msg)
             
             elif int(option) == 2:
                 count = 0
                 max_attempts = 3
-                print(f"You can add {max_attempts} toppings in your pizza")
+                print(f"You can add {max_attempts} toppings in your pizza\n")
                 #Iterate if condition is valid.
                 while count < max_attempts:
                     toppings = input("Enter your topping \n")
-                    print(f"You added {toppings} to your pizza!")
+                    #display result
+                    print(f"You added {toppings} to your pizza!\n")
                     count += 1
                 else:
-                    print(f"All toppings added. End of option 2.")
+                    #display result
+                    print(f"All toppings added. End of option 2.\n")
                     option = input(prompt)
 
             elif int(option) == 3:
@@ -62,14 +65,16 @@ while True:
                 while True:
                     toppings = input("\nPlease add your toppings. Enter 'quit' to end the program.\n")
                     if toppings == 'quit':
-                        print(f"All toppings added. End of option 3.")  
+                        #display result
+                        print(f"All toppings added. End of option 3.\n")  
                         option = input(prompt)
                         break
                     else:
-                        print(f"You added {toppings} to your pizza!")  
+                        #display result
+                        print(f"You added {toppings} to your pizza!\n")  
                                     
         else:
-            print("End of program.")
-            exit()    
+            print("End of program.\n")
+            exit()
     except ValueError:
-        print("Invalid option, Please try again.")
+        print("Invalid option, Please try again.\n")

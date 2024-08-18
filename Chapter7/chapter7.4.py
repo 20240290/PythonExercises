@@ -10,5 +10,6 @@ toppings = ""
 while toppings != 'quit':
     toppings = input("\nPlease add your toppings. Enter 'quit' to end the program.\n")
     if toppings != 'quit':
+        #display result
         print(f"You added {toppings} to your pizza!")
-print("End of loop!")    
+print("End of loop!")  #end of program  

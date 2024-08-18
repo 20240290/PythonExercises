@@ -16,7 +16,7 @@ while True:
             msg = "$15"
       except ValueError:
           msg = "Invalid age."         
-      print(msg)    
+      print(msg)  #display result
   except KeyboardInterrupt:
       print("Program exit!")
       exit()
