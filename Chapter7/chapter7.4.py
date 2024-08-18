@@ -5,12 +5,10 @@
 
 #initialize empty toppings string
 toppings = ""
-prompt = "\nPlease add your toppings. Enter 'quit' to end the program.\n"
 
 #Iterate each toppings while its not equal to 'quit'
 while toppings != 'quit':
-    toppings = input(prompt)
+    toppings = input("\nPlease add your toppings. Enter 'quit' to end the program.\n")
     if toppings != 'quit':
         print(f"You added {toppings} to your pizza!")
-else:
-    print("......")    
+print("End of loop!")    

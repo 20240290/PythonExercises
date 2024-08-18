@@ -14,8 +14,7 @@ msg = ""
 
 #Catch errors if user input's string
 try:
-    msg = f"{int(head_count) > 8 and "Sorry, you will have to wait for table." 
-    or "Great! your table is ready!"} \n"
+    msg = f"{int(head_count) > 8 and 'Sorry, you will have to wait for table.' or 'Great! your table is ready!'} "
 except ValueError:
     msg = "Head count is not a number. Try again." 
 print(msg)

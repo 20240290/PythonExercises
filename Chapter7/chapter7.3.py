@@ -12,8 +12,8 @@ msg = ""
 
 #Catch errors if user input's string
 try:
-   msg = f"{ int(num) % 10 == 0 and "Number is multiple of 10." 
-   or "Number is not multiple of 10."}"
+   msg = f"{ int(num) % 10 == 0 and 'Number is multiple of 10.' 
+   or 'Number is not multiple of 10.'}"
 except ValueError:
    msg = "Invalid input. Please try again."
 print(msg)
