@@ -18,13 +18,15 @@ prompt += "3.Use a break statement to exit the loop when the user enters a 'quit
 prompt += "Type 'end' to terminate program.\n\n"
 option = input(prompt)
 
-#option needs to be in int when selecting option. If user type end, should exit the program, else catch error.
+#option needs to be in int when selecting option. 
+# If user type end, should exit the program, else catch error.
 while True:
     try:
         if option != 'end':  
             if int(option) == 1:
                 age = ""
-                #age needs to be in int when comparing to int, unless user enters 'quit', program should quit else catch error.
+                #age needs to be in int when comparing to int, unless user 
+                # enters 'quit', program should quit else catch error.
                 while age != 'quit':
                     msg = ""
                     age = input("Please enter your age.  Type 'quit' to end program.\n")
