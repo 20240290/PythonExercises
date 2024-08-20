@@ -56,6 +56,20 @@ def describe_city(city: str, country: str = "Canada"):
         country (str, optional): name of the country. Defaults to "Canada".
     """
     _country = f"{country == "Canada" and "Canada" or country}"  
-    print(f"{city} is in {_country} \n")
+    print(f"{city.title()} is in {_country.title()} \n")
     
-    
+#Exercise 8.6
+def city_country(city: str, country: str):
+    """
+    Returns the formatted city and country in string.
+    Args:
+    ----
+        city (str): city name.
+        country (str): country name.
+        
+    Returns:
+    -------
+    String format city,name. ex: "Santiago, Chile"    
+    """
+    return f"{city.title()},{country.title()}"
+

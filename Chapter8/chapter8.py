@@ -58,7 +58,9 @@ module.describe_city("Cebu", "Philippines")
 # Call your function with at least three city-country pairs, 
 # and print the values that are returned.
 
-
+module.city_country("Manila","Philippines")
+module.city_country("St. John","Canada")
+module.city_country("Singapore","Singapore")
 
 # 8-7. Album: Write a function called make_album() that builds a 
 # dictionary describing a music album. The function should take in an 
