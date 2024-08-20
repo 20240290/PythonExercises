@@ -138,16 +138,33 @@ def generate_user_album():
     dictionary
         album information of the user in dictionary
     """
-    print("User albums")
+    print("User albums! Type 'quit' to end the program.")
     while True:
         artist = input("Enter the song artist: \n")
+        if artist == "quit": 
+            break         
         album = input("Enter album title: \n")
-
+        if album == "quit":
+             break
+        print(f"\nAlbum information is : {make_album(artist, album)} \n")
         
-
-
 #Exercise 8.9
 
+def show_messages(messages: list):
+    """
+    Method to display the list of messages.
+
+    Parameters
+    ----------
+    messages: listS
+        Array of messages.
+
+    Returns
+    -------
+    none
+    """
+    for msg in messages:
+        print(f"{msg} \n")
 #Exercise 8.10
 
 #Exercise 8.11
