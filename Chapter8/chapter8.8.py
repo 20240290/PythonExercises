@@ -2,7 +2,7 @@
 # August 19, 2024
 
 #Module import
-import Chap8Module as module
+from Chap8Module import generate_user_album
 
 
 # 8-8. User Albums: Start with your program from Exercise 8-7. 
@@ -11,5 +11,5 @@ import Chap8Module as module
 # input and print the dictionary that’s created. Be sure to include a 
 # quit value in the while loop.
 
-module.generate_user_album()
+generate_user_album()
 

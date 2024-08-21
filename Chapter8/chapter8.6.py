@@ -2,7 +2,7 @@
 # August 19, 2024
 
 #Module import
-import Chap8Module as module
+from Chap8Module import city_country
 
 # 8-6. City Names: Write a function called city_country() that 
 # takes in the name of a city and its country. The function should 
@@ -12,6 +12,6 @@ import Chap8Module as module
 # Call your function with at least three city-country pairs, 
 # and print the values that are returned.
 
-print(f"{module.city_country("Manila","Philippines")} \n")
-print(f"{module.city_country("St. John","Canada")} \n")
-print(f"{module.city_country("Singapore","Singapore")} \n")
+print(f"{city_country("Manila","Philippines")} \n")
+print(f"{city_country("St. John","Canada")} \n")
+print(f"{city_country("Singapore","Singapore")} \n")

@@ -2,7 +2,7 @@
 # August 19, 2024
 
 #Module import
-import Chap8Module as module
+from Chap8Module import describe_city
 
 # 8-5. Cities: Write a function called describe_city() that accepts 
 # the name of a city and its country. The function should print a 
@@ -10,6 +10,6 @@ import Chap8Module as module
 # for the country a default value. Call your function for three 
 # different cities, at least one of which is not in the default country.
 
-module.describe_city("Toronto")
-module.describe_city("Vancouver")
-module.describe_city("Cebu", "Philippines")
+describe_city("Toronto")
+describe_city("Vancouver")
+describe_city("Cebu", "Philippines")
