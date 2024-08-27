@@ -36,6 +36,17 @@ class Lottery():
         none
         """
         return random.sample(self.pool, self.limit)
+    
+    #Exercise 9.15
+    def generate_me_a_ticket(self) -> list:
+        """
+        Generate a random ticket.
+        
+        Parameter
+        ---------
+        none
+        """ 
+        return random.sample(self.pool, self.limit)
 
     def simulate_my_ticket(self, ticket: list) -> tuple:
         """
@@ -50,8 +61,7 @@ class Lottery():
                 
                 if set(winning_numbers) == set(ticket):
                     search_ticket = False
-                    return (attempts, ticket)
-                
-                
+                    return (attempts, ticket, winning_numbers)
+                  
             except KeyboardInterrupt:
                 exit()

@@ -14,8 +14,17 @@ pools = lottery([1,2,3,4,5,6,7,8,9, 10, 11, 12, 13, 14, 15,
                  'A', 'B', 'C', 'D', 'E', 'F', 'G', 'h', 'I', 'J'])
 
 
-ticket = lottery.generate()
+#call the generate_me_a_ticket method to return random combination 
+# of letters and number
+ticket = pools.generate_me_a_ticket()
+
+#call the simulate_my_ticket method to simulate the ticket to how many attempts 
+# until it will have the winning number.
+result = pools.simulate_my_ticket(ticket)
+
 #Display the winning combinations
-print("Lottery winning combination: \n")
-print(f"  {pools.get_winning_numbers()} \n")
-print("Any ticket matching these 4 numbers or latters wins a prize!")
+print("Lottery winning ticket probability")
+
+msg = f"It takes {result[0]} to match my ticket: \n {result[1]}"
+msg += f"\nto the winning ticket: \n {result[2]}"
+print(msg)
