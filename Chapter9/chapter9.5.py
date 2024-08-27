@@ -22,8 +22,10 @@ tony.increment_login_attempts()
 tony.increment_login_attempts()
 tony.increment_login_attempts()
 
+print("")
 #call reset_login_attempts method from User Class
 tony.reset_login_attempts()
+print("")
 
 #call increment_login_attempts method from User Class
 tony.increment_login_attempts()

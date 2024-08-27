@@ -17,8 +17,8 @@ from Classes.Restaurant import Restaurant
 resto = Restaurant("Army Navy","Burger")
 
 #display class attribute values
-print(f"Restaurant name \n: {resto.name.title()}")
-print(f"Restaurant cusine \n: {resto.cuisine.title()}")
+print(f"Restaurant name: \n {resto.name.title()}")
+print(f"Restaurant cusine: \n {resto.cuisine.title()}")
 
 #call describe_restaurant method from Restaurant Class
 resto.describe_restaurant()

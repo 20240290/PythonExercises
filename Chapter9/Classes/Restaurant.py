@@ -40,7 +40,7 @@ class Restaurant():
         none    
         """
         
-        print(f"Restaurant name: {self.name} Cuisine Type: {self.cuisine}")
+        print(f"Restaurant name: {self.name} \nCuisine Type: {self.cuisine} \n")
         
     def open_restaurant(self):
         """

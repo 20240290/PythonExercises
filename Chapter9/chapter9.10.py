@@ -7,10 +7,10 @@
 # to show that the import statement is working properly.
 
 #I am using this approach to import a module under classes folder
-from Classes.Restaurant import Restaurant
+from Classes.RestoMod import Restaurant as resto
 
 #variables that has instance of the Restaurant Class
-one_bistro = Restaurant("Rico's Lechon", "Philippine Cuisine")
+one_bistro = resto("Rico's Lechon", "Philippine Cuisine")
 
 #call set_number_served method from Restaurant Class
 one_bistro.set_number_served(5)

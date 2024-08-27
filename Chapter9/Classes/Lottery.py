@@ -55,13 +55,10 @@ class Lottery():
         attempts = 0
         search_ticket = True
         while search_ticket:
-            try:
-                winning_numbers = self.get_winning_numbers()
-                attempts += 1
-                
-                if set(winning_numbers) == set(ticket):
-                    search_ticket = False
-                    return (attempts, ticket, winning_numbers)
-                  
-            except KeyboardInterrupt:
-                exit()
+            winning_numbers = self.get_winning_numbers()
+            attempts += 1
+            
+            #using Set to compare 2 unordered collection
+            if set(winning_numbers) == set(ticket):
+                search_ticket = False
+                return (attempts, ticket, winning_numbers)
