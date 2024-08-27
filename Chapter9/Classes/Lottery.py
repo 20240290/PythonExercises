@@ -42,12 +42,16 @@ class Lottery():
         Ticket simulation to see if I win the lottery.
         """
         attempts = 0
-        while True:
+        search_ticket = True
+        while search_ticket:
             try:
                 winning_numbers = self.get_winning_numbers()
                 attempts += 1
+                
                 if set(winning_numbers) == set(ticket):
-                    break
+                    search_ticket = False
                     return (attempts, ticket)
+                
+                
             except KeyboardInterrupt:
                 exit()
