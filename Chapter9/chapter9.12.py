@@ -7,7 +7,7 @@
 # that everything is still working correctly.
 
 from Classes.UserRoles import AdminUser as admin
-
+#variables that has instance of the AdminUser Class
 admin = admin("John", 
             "Wick", 
             ['can add post', 
